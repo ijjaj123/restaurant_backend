@@ -1,10 +1,11 @@
 // API Configuration
 // Change this to your production URL when deploying
 // Example: export const API_BASE_URL = 'https://your-api.com';
-export const API_BASE_URL = 'http://127.0.0.1:8000';
+export const API_BASE_URL = 'http://127.0.0.1:7003';
 
 // API endpoints
 export const API_ENDPOINTS = {
+  menu: `${API_BASE_URL}/api/home/menu-items/`,
   products: `${API_BASE_URL}/api/products/`,
   orders: `${API_BASE_URL}/api/orders/`,
   orderById: (id: number) => `${API_BASE_URL}/api/orders/${id}/`,
@@ -58,7 +59,7 @@ export interface Order {
 // API functions
 
 export async function loadProducts(): Promise<Product[]> {
-  return apiRequest<Product[]>(API_ENDPOINTS.products);
+  return apiRequest<Product[]>(API_ENDPOINTS.menu);
 }
 
 export async function createProduct(productData: Omit<Product, 'id'>): Promise<Product> {
