@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Restaurant warm palette - burgundy & cream */
+    --background: 35 25% 96%;
+    --foreground: 25 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Burgundy/Wine red as primary brand color */
+    --primary: 345 65% 35%;
+    --primary-foreground: 35 25% 96%;
+
+    /* Cream/warm beige for secondary elements */
+    --secondary: 35 35% 88%;
+    --secondary-foreground: 25 30% 15%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Gold/Amber accent for CTAs */
+    --accent: 40 85% 55%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 345 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Hero gradient colors */
+    --hero-start: 345 65% 35%;
+    --hero-end: 345 55% 25%;
+
+    /* Success state */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --sidebar-background: 35 25% 96%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 345 65% 35%;
+    --sidebar-primary-foreground: 35 25% 96%;
+    --sidebar-accent: 35 35% 88%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 345 65% 35%;
+  }
+
+  .dark {
+    --background: 25 20% 10%;
+    --foreground: 35 25% 96%;
+
+    --card: 25 20% 14%;
+    --card-foreground: 35 25% 96%;
+
+    --popover: 25 20% 14%;
+    --popover-foreground: 35 25% 96%;
+
+    --primary: 345 65% 45%;
+    --primary-foreground: 35 25% 96%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 25% 96%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 40 85% 60%;
+    --accent-foreground: 25 20% 10%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 35 25% 96%;
+
+    --border: 25 20% 18%;
+    --input: 25 20% 18%;
+    --ring: 345 65% 45%;
+
+    --hero-start: 345 65% 45%;
+    --hero-end: 345 55% 35%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 35 25% 96%;
+    --sidebar-primary: 345 65% 45%;
+    --sidebar-primary-foreground: 35 25% 96%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 35 25% 96%;
+    --sidebar-border: 25 20% 18%;
+    --sidebar-ring: 345 65% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
