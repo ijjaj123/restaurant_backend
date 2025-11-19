@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # Third-party apps
     "rest_framework",
     "corsheaders",              # <-- ADD THIS
+    "drf_yasg",
 ]
 
 # Your local apps
